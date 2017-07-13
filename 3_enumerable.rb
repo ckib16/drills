@@ -1,3 +1,5 @@
+# ruby_drills gem
+
 # Array Methods
 array.each # each method iterates through the array with the variable representing the value at each index.
 array.each_index { |i| puts "This is index #{i}" } # each_index method iterates through the array much like the each method, however the variable represents the index number as opposed to the value at each index. It passes the index of the element into the block and you may do as you please with it. The original array is returned.
