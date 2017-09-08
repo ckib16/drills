@@ -20,22 +20,45 @@ Source - http://blog.deveo.com/how-to-create-a-kanban-inspired-to-do-list-applic
 - Make links into button
 
 ## User
-- install devise
+- Install devise gem
 - Generate devise user  + views
 - Fix sign up & login links
 - Make conditional for sign in/out in views
 
 ## Task
-- Scaffold Task with strings content & state with default "open"; user_id integer
+- Scaffold Task with 2 strings: content & state (with default "open") & 1 integer: user_id 
 - Controller#index : @open @wip @closed activerecord queries
 - Associations for task & user
 - Validations for task (content & user_id)
 
 ## 3 columns for view
 
-## Def change for state change 
-- add route
-- Add links to new route
+## State change for tasks via non-RESTful route
+- model: make sure the `state` attribute is added to table via migrations
+- controller: add non-RESTful action using `update_attributes`
+```rb
+# PATCH/PUT - added as custom route: change_task
+def change
+  @task.update_attributes(state: params[:state])
+
+  respond_to do |format|
+    format.html { redirect_to tasks_path, notice: "Task updated"}
+  end
+end
+```
+- routes: add new "member" route to the parent resource
+```rb
+resources :tasks do
+  member do
+    put :change
+  end
+end
+```
+
+- view: add a `link_to` using PUT method & pass in state change to params
+```rb
+<%= link_to change_task_path(task, state: "open"), method: :put %>
+```
 
 ## Clean up forms
 - Task partial
