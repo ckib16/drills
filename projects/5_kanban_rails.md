@@ -37,7 +37,8 @@ Source - http://blog.deveo.com/how-to-create-a-kanban-inspired-to-do-list-applic
 - model: make sure the `state` attribute is added to table via migrations
 - controller: add non-RESTful action using `update_attributes`
 ```rb
-# PATCH/PUT - added as custom route: change_task
+
+PATCH/PUT - added as custom route: change_task
 def change
   @task.update_attributes(state: params[:state])
 

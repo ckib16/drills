@@ -1,7 +1,7 @@
 # Roadmap Checklist
 ## Use Tiny Apps Workflow (Practicing Rails - Chpt 1)
 
-Ruby:  
+## Ruby:  
 - Blocks
 - Enumerable, strings, hashes, arrays, dates, and time
 - [x] Basic Syntax
@@ -9,7 +9,7 @@ Ruby:
 - [x] Classes and instance variables
 - [x] How to search and read the API documentation
 
-Rails:  
+## Rails:  
 - Form helpers
 - link_to and routes
 - How data gets from the view to the model, and back up (params, rails response cycle)
@@ -18,12 +18,12 @@ Rails:
 - Migrations
 - [x] Generators
 
-HTML / CSS:  
+## HTML / CSS:  
 - Forms and inputs
 - [x] The “Markdown Subset” (headers, strong, em, lists, links, images)
 - [x] Bootstrap
 
-TDD
+## TDD
 - capybara matchers
 - rspec matchers
 - Workflow - overcoming "writer's block" (See Practicing Rails Ch.4)
@@ -32,10 +32,10 @@ TDD
   - How: Arrange, Act, Assert
   - Quantity: Happy path, sad path, edge cases
 
-ES6 & React:  
+## ES6 & React:  
 - ES6: "The Javascript Way" leanpub
-  - Learn the 80% you’ll actually use:
-  - arrows • let/const • import • classes • destructuring
+  - Learn the 80% you’ll actually use: (source:'React Timeline PDF')
+    - arrows • let/const • import • classes • destructuring
 - create-react-app
 - "Rails 5 + React Course" Learnetto
 
